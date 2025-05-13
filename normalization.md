@@ -92,7 +92,8 @@ The schema is now normalized up to Third Normal Form (3NF), ensuring data integr
 
 ✅ The schema satisfies 3NF.
 
-✅ So, using lookup tables instead of enums is the more strictly normalized (3NF-compliant) approach.
+# So, using lookup tables instead of enums is the more strictly normalized (3NF-compliant) approach.
+
 For example:
 Instead of this:
 
@@ -115,10 +116,10 @@ Table roles {
 This eliminates the transitive dependency:
 ```user_id → role → role_name```
 
-💡 TL;DR
-Approach	3NF Compliant?	Best For
-Enums	✅ Basic 3NF	Simple, static value sets
-Lookup Tables (normalized)	✅✅ Stronger 3NF	Dynamic, descriptive, or extendable values
+| Approach                       | 3NF Compliant?    | Best For                                   |
+| ------------------------------ | ----------------- | ------------------------------------------ |
+| **Enums**                      | ✅ *Basic 3NF*     | Simple, static value sets                  |
+| **Lookup Tables (normalized)** | ✅✅ *Stronger 3NF* | Dynamic, descriptive, or extendable values |
 
 ---
 
@@ -126,4 +127,3 @@ Lookup Tables (normalized)	✅✅ Stronger 3NF	Dynamic, descriptive, or extendab
 
 The database schema is well-structured and adheres to best practices for normalization up to the Third Normal Form (3NF). It avoids redundancy, enforces data integrity via foreign keys and enums, and maintains clean entity relationships.
 
-"""
