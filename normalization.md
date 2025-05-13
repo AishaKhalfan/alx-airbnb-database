@@ -2,7 +2,7 @@
 
 Objective: Apply normalization principles to ensure the database is in the third normal form (3NF).
 
-##vInstructions:
+**Instructions:**
 
 - Review your schema and identify any potential redundancies or violations of normalization principles.
 
