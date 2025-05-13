@@ -1,5 +1,3 @@
-# Re-run after kernel reset: Generate the SQL DDL file again
-
 -- Table: roles (replaces enum role)
 CREATE TABLE roles (
     role_id SERIAL PRIMARY KEY,
