@@ -48,6 +48,9 @@ Each task builds on the previous one, providing a step-by-step approach to devel
 - Directory: ERD/
 - File: requirements.md
 
+  **This is the link to my erd diagram i used dbml language**
+   [aisha_airbnb ERD](https://dbdiagram.io/d/aisha_airbnb-6821e04b5b2fc4582f34f19e)
+
 ## Task 1. Normalize Your Database Design
 
 **Objective:** Apply normalization principles to ensure the database is in the third normal form (3NF).
