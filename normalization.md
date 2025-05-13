@@ -127,3 +127,5 @@ This eliminates the transitive dependency:
 
 The database schema is well-structured and adheres to best practices for normalization up to the Third Normal Form (3NF). It avoids redundancy, enforces data integrity via foreign keys and enums, and maintains clean entity relationships.
 
+[LINK TO MY NORMALIZED ERD](https://dbdiagram.io/d/aisha_airbnb-6821e04b5b2fc4582f34f19e)
+
