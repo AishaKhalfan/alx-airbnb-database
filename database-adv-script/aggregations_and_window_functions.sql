@@ -15,6 +15,28 @@ GROUP BY
   users.email;
 
 --Use a window function (ROW_NUMBER, RANK) to rank properties based on the total number of bookings they have received.
+-- 1. Using ROW_NUMBER() for strict ranking (no ties)
+WITH property_counts AS (
+  SELECT
+    properties.property_id,
+    properties.name AS property_name,
+    COUNT(bookings.booking_id) AS total_bookings
+  FROM
+    properties
+    LEFT JOIN bookings ON bookings.property_id = properties.property_id
+  GROUP BY
+    properties.property_id,
+    properties.name
+)
+SELECT
+  property_id,
+  property_name,
+  total_bookings,
+  ROW_NUMBER() OVER (ORDER BY total_bookings DESC) AS row_number_rank
+FROM
+  property_counts;
+
+-- 2. Using RANK() to allow ties in ranking
 WITH property_counts AS (
   SELECT
     properties.property_id,
@@ -32,5 +54,7 @@ SELECT
   property_name,
   total_bookings,
   RANK() OVER (ORDER BY total_bookings DESC) AS rank
-FROM property_counts;
+FROM
+  property_counts;
+
 
