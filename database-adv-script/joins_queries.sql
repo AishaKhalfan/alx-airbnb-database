@@ -4,7 +4,15 @@ select bookings.booking_id, property_id, users.first_name from bookings inner jo
 
 --Write a query using aLEFT JOIN to retrieve all properties and their reviews, including properties that have no reviews.
 
-select properties.name, reviews.comment, name from properties left join reviews on properties.property_id = reviews.property_id;
+-- select properties.name, reviews.comment, name from properties left join reviews on properties.property_id = reviews.property_id;
+SELECT
+  properties.name AS property_name,
+  reviews.comment
+FROM
+  properties
+LEFT JOIN
+  reviews ON properties.property_id = reviews.property_id;
+
 
 --Write a query using a FULL OUTER JOIN to retrieve all users and all bookings, even if the user has no booking or a booking is not linked to a user. 
 
